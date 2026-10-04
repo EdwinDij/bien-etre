@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prendre rendez-vous | Atelier Sève, sophrologie Paris 19e</title>
+  <meta name="description" content="Prenez rendez-vous pour une séance de sophrologie au cabinet à Paris 19e ou en visio. Réponse sous 48 heures.">
+  <meta name="theme-color" content="#3d5a48">
+  <link rel="canonical" href="https://VOTRE-PSEUDO.github.io/demos/bien-etre/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prendre rendez-vous | Atelier Sève, sophrologie Paris 19e">
+  <meta property="og:description" content="Prenez rendez-vous pour une séance de sophrologie au cabinet à Paris 19e ou en visio. Réponse sous 48 heures.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&h=630&q=70">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Spectral:wght@300;400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <p class="bandeau-demo">Site de démonstration réalisé par <a href="https://edwindijeont-dev.fr">Edwin Dijeont</a>, développeur web freelance. Le cabinet est fictif.</p>
+
+  <header class="header">
+    <div class="conteneur header__inner">
+      <a class="logo" href="./" aria-label="Atelier Sève, accueil">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#f1f4ef"/><path d="M20 8c-6 6-8 11-8 15a8 8 0 0 0 16 0c0-4-2-9-8-15z" fill="#a7b9a1"/><path d="M20 14v17M20 22l-4-3M20 26l4-3" stroke="#3d5a48" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+        <span>Atelier Sève<small>Sophrologie, Paris 19e</small></span>
+      </a>
+
+      <button class="menu-bouton" type="button" popovertarget="menu" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menu
+      </button>
+
+      <nav class="nav" id="menu" popover aria-label="Navigation principale">
+        <button class="nav__fermer" type="button" popovertarget="menu" popovertargetaction="hide">
+          Fermer <span aria-hidden="true">✕</span>
+        </button>
+        <ul>
+          <li><a class="nav__lien" href="./">Accueil</a></li>
+          <li><a class="nav__lien" href="services.html">Séances et parcours</a></li>
+          <li><a class="nav__lien" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <a class="bouton bouton--plein" href="contact.html#rdv">Prendre rendez-vous</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <header class="entete-page">
+      <div class="conteneur">
+        <nav class="fil-ariane" aria-label="Fil d'Ariane">
+          <ol>
+            <li><a href="./">Accueil</a></li>
+            <li aria-current="page">Contact</li>
+          </ol>
+        </nav>
+        <h1>Prendre rendez-vous</h1>
+        <p>Indiquez vos disponibilités&nbsp;: je vous propose un créneau par e-mail ou par téléphone sous 48 heures.</p>
+      </div>
+    </header>
+
+    <section class="section" aria-label="Formulaire et coordonnées">
+      <div class="conteneur contact__grille">
+        <!--
+          DÉMO : le formulaire mène à une page de confirmation (merci.html).
+          En production, remplacez action par l'URL de votre service de formulaire
+          (Formspree, Basin, Netlify Forms, votre backend…) et passez method="post".
+          Aucun JavaScript n'est nécessaire dans les deux cas.
+        -->
+        <form class="formulaire" id="rdv" action="merci.html" method="get">
+          <h2>Votre demande</h2>
+          <p class="formulaire__aide">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
+
+          <div class="champs">
+            <div class="champ">
+              <label for="prenom">Prénom *</label>
+              <input id="prenom" name="prenom" type="text" autocomplete="given-name" required>
+            </div>
+            <div class="champ">
+              <label for="nom">Nom *</label>
+              <input id="nom" name="nom" type="text" autocomplete="family-name" required>
+            </div>
+            <div class="champ">
+              <label for="email">E-mail *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-erreur">
+              <span class="champ__erreur" id="email-erreur">Indiquez une adresse du type nom@exemple.fr.</span>
+            </div>
+            <div class="champ">
+              <label for="tel">Téléphone</label>
+              <input id="tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="tel-indice">
+              <span class="champ__indice" id="tel-indice">Si vous préférez être rappelé</span>
+            </div>
+
+            <div class="champ champ--large">
+              <label for="motif">Ce qui vous amène *</label>
+              <select id="motif" name="motif" required>
+                <option value="">Choisir</option>
+                <option>Stress et anxiété</option>
+                <option>Sommeil</option>
+                <option>Préparation mentale</option>
+                <option>Atelier collectif</option>
+                <option>Autre, je précise dans le message</option>
+              </select>
+            </div>
+
+            <fieldset class="groupe">
+              <legend>Format souhaité *</legend>
+              <div class="pastilles">
+                <label class="pastille"><input type="radio" name="format" value="cabinet" required checked><span>Au cabinet</span></label>
+                <label class="pastille"><input type="radio" name="format" value="visio"><span>En visio</span></label>
+                <label class="pastille"><input type="radio" name="format" value="indifferent"><span>Peu importe</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="groupe">
+              <legend>Moments qui vous conviennent</legend>
+              <div class="pastilles">
+                <label class="pastille"><input type="checkbox" name="moment" value="matin"><span>Matin</span></label>
+                <label class="pastille"><input type="checkbox" name="moment" value="midi"><span>Pause déjeuner</span></label>
+                <label class="pastille"><input type="checkbox" name="moment" value="apres-midi"><span>Après-midi</span></label>
+                <label class="pastille"><input type="checkbox" name="moment" value="soir"><span>Après 18 h</span></label>
+                <label class="pastille"><input type="checkbox" name="moment" value="samedi"><span>Samedi</span></label>
+              </div>
+            </fieldset>
+
+            <div class="champ champ--large">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Quelques mots sur votre situation, si vous le souhaitez."></textarea>
+            </div>
+          </div>
+
+          <p class="consentement">
+            <input id="rgpd" name="rgpd" type="checkbox" required>
+            <label for="rgpd">J'accepte que ces informations soient utilisées pour me recontacter. Elles restent confidentielles et ne sont jamais partagées. *</label>
+          </p>
+          <button class="bouton bouton--plein" type="submit">Envoyer ma demande de rendez-vous</button>
+        </form>
+
+        <aside class="coordonnees" aria-label="Coordonnées">
+          <div class="carte-info">
+            <h2>Coordonnées</h2>
+            <address>
+              Atelier Sève<br>
+              7 rue de Meaux, 75019 Paris<br>
+              Métro Colonel Fabien (ligne 2) ou Jaurès (lignes 2, 5, 7 bis)
+            </address>
+            <p><a href="tel:+33612345678">06 12 34 56 78</a><br><a href="mailto:contact@atelier-seve.fr">contact@atelier-seve.fr</a></p>
+          </div>
+
+          <div class="carte-info">
+            <h2>Horaires des séances</h2>
+            <table class="horaires">
+              <caption class="sr-only">Horaires des séances</caption>
+              <tbody>
+                <tr><th scope="row">Lundi au jeudi</th><td>9 h – 20 h</td></tr>
+                <tr><th scope="row">Vendredi</th><td>9 h – 17 h</td></tr>
+                <tr><th scope="row">Samedi</th><td>Ateliers collectifs</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="plan">
+            <!-- Plan illustré en SVG : aucun service tiers, aucun cookie -->
+            <svg viewBox="0 0 400 220" role="img" aria-label="Plan d'accès&nbsp;: le cabinet est rue de Meaux, entre les métros Colonel Fabien et Jaurès, près du parc des Buttes-Chaumont.">
+              <rect width="400" height="220" fill="#f1f4ef"/>
+              <path d="M250 150 C 290 120, 360 130, 380 170 S 330 230, 270 215 S 220 175, 250 150z" fill="#cfdccb"/>
+              <text x="282" y="182" font-family="Albert Sans, sans-serif" font-size="11" fill="#3d5a48">Buttes-Chaumont</text>
+              <g stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round">
+                <path d="M20 60 L380 95"/><path d="M60 0 L150 220"/><path d="M0 140 L240 120"/>
+              </g>
+              <text x="250" y="80" font-family="Albert Sans, sans-serif" font-size="11" fill="#56625b" transform="rotate(5.5 250 80)">Rue de Meaux</text>
+              <circle cx="88" cy="64" r="8" fill="#3d5a48"/><text x="40" y="45" font-family="Albert Sans, sans-serif" font-size="11" fill="#263b2f">M Jaurès</text>
+              <circle cx="122" cy="134" r="8" fill="#3d5a48"/><text x="134" y="160" font-family="Albert Sans, sans-serif" font-size="11" fill="#263b2f">M Colonel Fabien</text>
+              <g transform="translate(190 78)">
+                <circle r="18" fill="#a7b9a1" opacity=".45"/>
+                <circle r="8" fill="#3d5a48"/><circle r="3" fill="#fff"/>
+              </g>
+            </svg>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=7+rue+de+Meaux+75019+Paris" rel="noopener">Ouvrir l'itinéraire dans Maps <span aria-hidden="true">↗</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="conteneur">
+      <div class="footer__grille">
+        <div>
+          <p><strong>Atelier Sève</strong><br>Claire Morel, sophrologue certifiée RNCP</p>
+        </div>
+        <div>
+          <h2>Cabinet</h2>
+          <address>7 rue de Meaux, 75019 Paris<br><a href="tel:+33612345678">06 12 34 56 78</a><br><a href="mailto:contact@atelier-seve.fr">contact@atelier-seve.fr</a></address>
+        </div>
+        <div>
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="./">Accueil</a></li>
+            <li><a href="services.html">Séances et parcours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Informations</h2>
+          <ul>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bas">
+        <p>© 2026 Atelier Sève. La sophrologie ne remplace pas un suivi médical. Photos&nbsp;: Unsplash.</p>
+        <p>Site conçu par <a href="https://edwindijeont-dev.fr">Edwin Dijeont</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
